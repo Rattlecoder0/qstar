@@ -2,6 +2,7 @@
 $side_padding: 0 10px;
 $text_color: white;
 $primary_button_color: #333;
+$button_shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 main {
     padding: $side_padding;
@@ -34,7 +35,7 @@ main {
             border: 3px solid var(--cherry-red);
             border-radius: 5px;
             overflow: hidden;
-            margin: 5px 0 10px 0;
+            margin: 5px 0 15px 0;
 
             span {
                 width: 50%;
@@ -142,7 +143,6 @@ footer {
 
     .add_remove_btns {
         z-index: 1;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px -20px 25px -5px, rgba(0, 0, 0, 0.04) 0px -10px 10px -5px;
 
         button {
             width: 50%;
@@ -152,14 +152,34 @@ footer {
             color: $text_color;
             font-size: 16px;
             border-radius: 0;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px -20px 25px -5px, rgba(0, 0, 0, 0.06) 0px -10px 10px -5px;
         }
         .remove{
             background-color: transparent;
-            color: var();
+            color: var(--cherry-red);
+            border-top-left-radius: 20px;
         }
         .add{
             background-color: var(--cherry-red);
+            border-top-right-radius: 20px;
         }
+    }
+}
+
+.confirm_close_btn{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    button{
+        width: 100%;
+    }
+    .no{
+        color: var(--cherry-red) !important;
+    }
+    .yes{
+        background-color: var(--cherry-red);
+        color: white !important;
+        box-shadow: $button_shadow;
     }
 }
 
