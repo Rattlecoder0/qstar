@@ -1,0 +1,20 @@
+$shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px;
+$primary_button_color: #333;
+
+.navbar {
+    background-color: var(--off-white);
+    box-shadow: $shadow;
+    padding: .9rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+    &__brand {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $primary_button_color;
+        font-family: "Roboto", serif;
+    }
+}

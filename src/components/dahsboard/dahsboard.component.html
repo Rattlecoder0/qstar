@@ -1,0 +1,35 @@
+  <main>
+    <div class="count_display">
+      <span class="input_counter">{{list_count}}</span>
+    </div>
+  
+    <div class="queue_list">
+      <p>Queue List</p>
+  
+      <div class="info_header">
+        <span>Waiting No</span> <span>Customer Name</span>
+      </div>
+  
+      <div class="list_names_container">
+        @for(list of list_details; track list){
+          <div class="list_names">
+            <span>{{list.waiting_no}}</span> <span>{{list.customer_name}}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <!-- <div class="counter-buttons">
+      <button mat-button (click)="counter(-1)"><i class="fa-solid fa-minus"></i></button>
+      <button mat-button (click)="counter(1)"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div class="submit-button">
+      <button mat-flat-button>ADD TO QUEUE</button>
+    </div> -->
+    <div class="add_remove_btns">
+      <button mat-flat-button class="remove">REMOVE</button>
+      <button mat-flat-button class="add" (click)="openBottomSheet()">ADD</button>
+    </div>
+  </footer>

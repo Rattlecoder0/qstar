@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+@import '@angular/material/prebuilt-themes/rose-red.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FCF6F5;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    height: 100%;
+}
+
+:root {
+    --off-white: #FCF6F5;
+    --cherry-red: #990011;
+    --input-bgcolor: #fae7e9a3;
+    --input-text-color: #61010a;
+    --disabled-input-border-color: #99001279;
+    --disabled-input-color: #60030dc6; 
+    --input-placeholder-color: #61010b92;
+}
+
+

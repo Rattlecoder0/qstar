@@ -1,0 +1,45 @@
+<div class="master_container">
+
+    <div class="queue_image">
+        <img src="../assets/people_standing_in_queue.png">
+    </div>
+
+    <div class="action_container">
+        <div class="welcome_text">
+            <h2>Welcome to <span>QStar</span></h2>
+        </div>
+
+        <div class="login_box">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <h2><span>Login</span> with mobile no</h2>
+
+                <div class="mobile_no" id="mobile_no_div">
+                    <div class="mobile_no_wrap">
+                        <input type="text" class="prefix" formControlName="ccode">
+                        <input type="number" class="number" formControlName="mobile" placeholder="Mobile Number">
+                    </div>
+                    <span *ngIf="mobile?.errors?.['required'] && mobile?.touched">Enter mobile no</span>
+                    <span *ngIf="mobile?.errors?.['pattern'] && mobile?.touched">Enter valid number</span>
+                </div>
+
+                <div class="otp" *ngIf="isOtpSent ">
+                    <input type="number" formControlName="otp" placeholder="OTP">
+                    <span *ngIf="otp?.errors?.['required'] && otp?.touched">Enter OTP</span>
+                    <span *ngIf="otp?.errors?.['invalidOtp']">Invalid OTP</span>
+                </div>
+
+                <button mat-raised-button type="button" class="login_btn" (click)="sendOtp()" *ngIf="!isOtpSent">Send
+                    OTP </button>
+
+                <button mat-raised-button type="submit" class="login_btn" *ngIf="isOtpSent"
+                    [disabled]="loginForm.invalid"> Submit
+                </button>
+            </form>
+        </div>
+        <div class="edit_resend_option">
+            <a *ngIf="isOtpSent" (click)="editNumber()"> Edit Number ?</a>
+            <a *ngIf="isOtpSent" (click)="resendOtp()" [class.disabled]="isProcessing">Resend OTP</a>
+        </div>
+    </div>
+
+</div>
