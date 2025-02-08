@@ -1,7 +1,7 @@
 <div class="master_container">
 
     <div class="queue_image">
-        <img src="../assets/people_standing_in_queue.png">
+        <img src="../../assets/people_standing_in_queue.png">
     </div>
 
     <div class="action_container">
@@ -28,10 +28,10 @@
                     <span *ngIf="otp?.errors?.['invalidOtp']">Invalid OTP</span>
                 </div>
 
-                <button mat-raised-button type="button" class="login_btn" (click)="sendOtp()" *ngIf="!isOtpSent">Send
+                <button mat-flat-button type="button" class="login_btn" (click)="sendOtp()" *ngIf="!isOtpSent" [disabled]="mobile?.invalid">Send
                     OTP </button>
 
-                <button mat-raised-button type="submit" class="login_btn" *ngIf="isOtpSent"
+                <button mat-flat-button type="submit" class="login_btn" *ngIf="isOtpSent"
                     [disabled]="loginForm.invalid"> Submit
                 </button>
             </form>

@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "../components/navbar/navbar.component";
+import { NavbarComponent } from "../app/components/navbar/navbar.component";
 import { NgIf } from '@angular/common';
 
 interface list_Details {

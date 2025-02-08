@@ -13,7 +13,7 @@
     <div class="list_names_container">
       @for(list of list_details; track list){
       <div class="list_names">
-        <span>{{list.waiting_no}}</span> <span>{{list.customer_name}}</span>
+        <span>{{list.waiting_no}}</span> <span>{{list.name}}</span>
       </div>
       }
     </div>
@@ -41,8 +41,8 @@
       <div class="modal-body">
         <p>Are you sure you want to remove a person from the queue?</p>
         <div class="confirm_close_btn">
-          <button mat-button class="no primary_button" data-bs-dismiss="modal">No</button>
-          <button mat-flat-button class="yes primary_button">Yes</button>
+          <button mat-button class="no primary_button" data-bs-dismiss="modal" id="close">No</button>
+          <button mat-flat-button class="yes primary_button" (click)="removePerson()">Yes</button>
         </div>
       </div>
     </div>

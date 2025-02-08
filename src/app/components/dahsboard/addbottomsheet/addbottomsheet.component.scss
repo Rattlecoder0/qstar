@@ -26,6 +26,12 @@ $primary_button_color: #333;
         }
     }
 
+    .err_mesg{
+        font-size: 13px;
+        margin-left: 8px;
+        color: red;
+    }
+
     .btns_box {
         display: flex;
         margin-top: 15px;
